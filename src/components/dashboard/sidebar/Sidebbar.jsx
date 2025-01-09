@@ -1,0 +1,57 @@
+/** @format */
+
+import React from "react";
+
+const Sidebbar = ({ handleClick, activeItem }) => {
+  const menuItems = [
+    { id: "overview", label: "Overview", icon: "/side-bar-icons/overview.svg" },
+    {
+      id: "my-chatbots",
+      label: "My Chatbots",
+      icon: "/side-bar-icons/chat-bot.svg",
+    },
+    { id: "messages", label: "Messages", icon: "/side-bar-icons/message.svg" },
+    {
+      id: "training",
+      label: "Training Module",
+      icon: "/side-bar-icons/brain.svg",
+    },
+    {
+      id: "analytics",
+      label: "Analytics",
+      icon: "/side-bar-icons/chart-histogram.svg",
+    },
+    {
+      id: "integrations",
+      label: "Integrations",
+      icon: "/side-bar-icons/algorithm.svg",
+    },
+    { id: "settings", label: "Settings", icon: "/side-bar-icons/setting.svg" },
+  ];
+
+  return (
+    <div className="w-full ">
+      <div className="h-screen w-full fixed max-w-[273px] bg-gray2 border-r-2 border-gray4">
+        <div className="px-6 py-5 mb-8">
+          <img src="/Logo.svg" alt="Logo" className="h-12" />
+        </div>
+        <div>
+          {menuItems.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleClick(item.id)}
+              className={`flex gap-3 items-center py-4 cursor-pointer duration-300 px-6 ${
+                activeItem === item.id ? "bg-white" : "hover:bg-white"
+              }`}
+            >
+              <img className="w-6" src={item.icon} alt={item.label} />
+              <p className="font-medium text-[18px]">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebbar;
