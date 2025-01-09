@@ -3,18 +3,14 @@
 import React from "react";
 import Heading from "../heading/heading";
 import Overview from "../overview/Overview";
-import Integrations from "../integrations/Integrations";
 import Analytics from "../analytic/Analytics";
+import Integrations from "../integrations/Integrations";
 
 const DashboardContainer = ({ activeItem }) => {
   const renderContent = () => {
     switch (activeItem) {
       case "overview":
-        return (
-          <div>
-            <Overview />
-          </div>
-        );
+        return <Overview />;
       case "my-chatbots":
         return <div>My Chatbots Content</div>;
       case "messages":
@@ -22,12 +18,10 @@ const DashboardContainer = ({ activeItem }) => {
       case "training":
         return <div>Training Module Content</div>;
       case "analytics":
-        return (
-          <div>
-            {" "}
-            <Analytics />{" "}
-          </div>
-        );
+        <div>
+          {" "}
+          <Analytics />{" "}
+        </div>;
       case "integrations":
         return (
           <div>
@@ -38,14 +32,14 @@ const DashboardContainer = ({ activeItem }) => {
       case "settings":
         return <div>Settings Content</div>;
       default:
-        return <div>Overview Content</div>;
+        return <Overview />;
     }
   };
 
   return (
     <div>
       <Heading activeItem={activeItem} />
-      <div>{renderContent()}</div>
+      <div className="p-4">{renderContent()}</div>
     </div>
   );
 };

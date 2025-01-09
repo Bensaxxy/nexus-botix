@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const Heading = ({ activeItem, toggleSidebar }) => {
+const Heading = ({ activeItem }) => {
   // Define a title mapping for each item
   const titles = {
     overview: "Overview",
@@ -15,18 +15,9 @@ const Heading = ({ activeItem, toggleSidebar }) => {
   };
 
   return (
-    <div className="h-[81px]">
-      <div className="container fixed w-full py-7 border-b-4 border-gray4 bg-gray2 flex items-center justify-between px-6">
-        {/* Title */}
+    <div className=" h-[81px]">
+      <div className="container fixed w-full py-7 border-b-4 border-gray4 bg-gray2">
         <h1 className="text-[20px] font-semibold">{titles[activeItem]}</h1>
-
-        {/* Toggle Button */}
-        <button
-          className="md:hidden bg-gray4 p-2 rounded-md"
-          onClick={toggleSidebar}
-        >
-          <img src="/menu-icon.svg" alt="Toggle Sidebar" className="w-6" />
-        </button>
       </div>
     </div>
   );
