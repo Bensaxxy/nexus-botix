@@ -49,7 +49,7 @@ const TrainingModule = () => {
           </p>
         );
       default:
-        return null;
+        return;
     }
   };
 

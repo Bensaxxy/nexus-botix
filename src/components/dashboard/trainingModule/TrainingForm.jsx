@@ -172,7 +172,7 @@ const TrainingForm = ({ setTotalLinks, setTotalCharacters }) => {
           )}
         </div>
       </form>
-
+      {/* create & train button */}
       <div className="flex flex-col justify-end items-end mt-10">
         <p className="text-[16px] text-black2">Initiate Training with Links:</p>
         <button className="flex items-center gap-1 bg-black1 text-white rounded-lg py-4 px-7">

@@ -9,9 +9,9 @@ const UsageOverview = ({ totalLinks, totalFiles, totalCharacters }) => {
   const MAX_CHARACTERS = 100000;
 
   // Calculate percentages for progress bars
-  const linksPercentage = (totalLinks / MAX_LINKS) * 100;
-  const filesPercentage = (totalFiles / MAX_FILES) * 100;
-  const charactersPercentage = (totalCharacters / MAX_CHARACTERS) * 100;
+  //   const linksPercentage = (totalLinks / MAX_LINKS) * 100;
+  //   const filesPercentage = (totalFiles / MAX_FILES) * 100;
+  //   const charactersPercentage = (totalCharacters / MAX_CHARACTERS) * 100;
 
   // Format character count to be more readable (e.g., 1.2k)
   const formatCharacterCount = (count) => {
@@ -36,12 +36,12 @@ const UsageOverview = ({ totalLinks, totalFiles, totalCharacters }) => {
                 {totalLinks}/{MAX_LINKS}
               </p>
             </div>
-            <div className="w-full bg-gray4 rounded-full h-2">
+            {/* <div className="w-full bg-gray4 rounded-full h-2">
               <div
                 className="bg-gray1 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${Math.min(linksPercentage, 100)}%` }}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Files */}
@@ -52,12 +52,12 @@ const UsageOverview = ({ totalLinks, totalFiles, totalCharacters }) => {
                 {totalFiles}/{MAX_FILES}
               </p>
             </div>
-            <div className="w-full bg-gray4 rounded-full h-2">
+            {/* <div className="w-full bg-gray4 rounded-full h-2">
               <div
                 className="bg-gray1 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${Math.min(filesPercentage, 100)}%` }}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Characters */}
@@ -69,12 +69,12 @@ const UsageOverview = ({ totalLinks, totalFiles, totalCharacters }) => {
                 {formatCharacterCount(MAX_CHARACTERS)}
               </p>
             </div>
-            <div className="w-full bg-gray4 rounded-full h-2">
+            {/* <div className="w-full bg-gray4 rounded-full h-2">
               <div
                 className="bg-gray1 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${Math.min(charactersPercentage, 100)}%` }}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

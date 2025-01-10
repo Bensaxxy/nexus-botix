@@ -71,7 +71,7 @@ const Files = ({ setTotalFiles }) => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div
         className={`bg-transparent border-2 py-20 border-gray1 cursor-pointer rounded-lg flex flex-col justify-center items-center relative
           ${dragActive ? "border-blue-500 bg-blue-50 " : ""}`}
@@ -133,6 +133,14 @@ const Files = ({ setTotalFiles }) => {
           ))}
         </div>
       )}
+      {/* create & train button */}
+      <div className="flex flex-col justify-end items-end mt-16">
+        <p className="text-[16px] text-black2">Initiate Training with Links:</p>
+        <button className="flex items-center gap-1 bg-black1 text-white rounded-lg py-4 px-7">
+          Create & Train Bot
+          <img src="/icons/arrow-right.svg" />
+        </button>
+      </div>
     </div>
   );
 };
