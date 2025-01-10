@@ -5,7 +5,7 @@ import React from "react";
 const Overview = () => {
   return (
     <div className="container bg-gray2 p-4">
-      <div className=" bg-white rounded-md p-4">
+      <div className=" bg-gray3 rounded-md p-4">
         <div className=" grid gap-10 grid-cols-1 md:grid-cols-3">
           <div className=" col-span-1 md:col-span-2">
             <div className=" grid grid-cols-2 gap-6">

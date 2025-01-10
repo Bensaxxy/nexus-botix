@@ -11,6 +11,7 @@ import Customization from "./components/welcomePages/customization/Customization
 import TestingAndLaunching from "./components/welcomePages/TestingAndLaunching";
 import ConfirmationDashboardAccess from "./components/welcomePages/ConfirmationDashboardAccess";
 import Dashboard from "./components/dashboard/Dashboard";
+import CreateChatbot from "./components/dashboard/myChatbots/CreateChatbot";
 
 const App = () => {
   const [botDetails, setBotDetails] = useState({
@@ -76,6 +77,7 @@ const App = () => {
             element={<ConfirmationDashboardAccess botDetails={botDetails} />}
           />
           <Route path="/dashboard-overview" element={<Dashboard />} />
+          <Route path="/create-chatbot" element={<CreateChatbot />} />
         </Routes>
       </Router>
     </div>

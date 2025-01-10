@@ -6,7 +6,7 @@ const Integrations = () => {
   return (
     <div>
       <div className="container bg-gray2 p-4">
-        <div className=" bg-white rounded-md p-4">
+        <div className=" bg-gray3 rounded-md p-4">
           <h1 className=" font-bold text-[28px]">
             Connect Nexus Botix to your favourite apps
           </h1>
