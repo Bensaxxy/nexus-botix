@@ -5,6 +5,7 @@ import Heading from "../heading/heading";
 import Overview from "../overview/Overview";
 import Analytics from "../analytic/Analytics";
 import Integrations from "../integrations/Integrations";
+import TrainingModule from "../trainingModule/TrainingModule";
 
 const DashboardContainer = ({ activeItem }) => {
   const renderContent = () => {
@@ -16,19 +17,11 @@ const DashboardContainer = ({ activeItem }) => {
       case "messages":
         return <div>Messages Content</div>;
       case "training":
-        return <div>Training Module Content</div>;
+        return <TrainingModule />;
       case "analytics":
-        <div>
-          {" "}
-          <Analytics />{" "}
-        </div>;
+        return <Analytics />;
       case "integrations":
-        return (
-          <div>
-            {" "}
-            <Integrations />{" "}
-          </div>
-        );
+        return <Integrations />;
       case "settings":
         return <div>Settings Content</div>;
       default:

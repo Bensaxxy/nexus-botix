@@ -30,23 +30,27 @@ const Sidebbar = ({ handleClick, activeItem }) => {
   ];
 
   return (
-    <div className="h-screen w-full bg-gray2 border-r-2 border-gray4">
-      <div className="px-6 py-5 mb-8">
-        <img src="/Logo.svg" alt="Logo" className="h-12" />
-      </div>
-      <div>
-        {menuItems.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => handleClick(item.id)}
-            className={`flex gap-3 items-center py-4 cursor-pointer duration-300 px-6 ${
-              activeItem === item.id ? "bg-white" : "hover:bg-white"
-            }`}
-          >
-            <img className="w-6" src={item.icon} alt={item.label} />
-            <p className="font-medium text-[18px]">{item.label}</p>
-          </div>
-        ))}
+    <div>
+      <div className="h-screen md:w-full max-w-20 md:max-w-[20%] fixed bg-gray2 border-r-2 border-gray4">
+        <div className="px-6 py-5 mb-8">
+          <img src="/Logo.svg" alt="Logo" className="h-12" />
+        </div>
+        <div>
+          {menuItems.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleClick(item.id)}
+              className={`flex gap-3 items-center py-4 cursor-pointer duration-300 px-6 ${
+                activeItem === item.id ? "bg-white" : "hover:bg-white"
+              }`}
+            >
+              <img className="w-6" src={item.icon} alt={item.label} />
+              <p className=" hidden md:block font-medium text-[18px]">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
