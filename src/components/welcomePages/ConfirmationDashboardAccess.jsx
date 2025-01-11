@@ -76,7 +76,7 @@ const ConfirmationDashboardAccess = ({ botDetails }) => {
             <div className="flex justify-end items-end">
               <button
                 onClick={handleSubmit}
-                className="mt-10 bg-gray1 font-medium py-3 px-6 rounded-lg text-white transition-all duration-300 mb-8"
+                className="mt-10 bg-gray1 hover:bg-black font-medium py-3 px-6 rounded-lg text-white transition-all duration-300 mb-8"
                 type="button"
               >
                 Submit

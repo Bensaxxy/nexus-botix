@@ -5,7 +5,7 @@ import Sidebbar from "./sidebar/Sidebbar";
 import DashboardContainer from "./sidebar/DashboardContainer";
 
 const Dashboard = () => {
-  const [activeItem, setActiveItem] = useState("overview");
+  const [activeItem, setActiveItem] = useState("my-chatbots");
 
   // Update the active item when a sidebar item is clicked
   const handleClick = (item) => {

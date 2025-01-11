@@ -15,7 +15,7 @@ const SkipToDashboard = () => {
       <div className="md:mt-10 pb-4 flex md:fixed md:bottom-10 md:right-20">
         <button
           onClick={handleSkipToDashboard}
-          className="underline text-black1 font-normal text-[12px]"
+          className="underline text-black1 hover:text-black duration-200 font-normal text-[12px]"
         >
           Skip to dashboard
         </button>

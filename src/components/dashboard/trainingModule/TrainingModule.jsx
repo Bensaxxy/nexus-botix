@@ -67,7 +67,7 @@ const TrainingModule = () => {
                 <div
                   className={`flex gap-1 cursor-pointer items-center ${
                     activeLink === "website-links"
-                      ? "bg-black2 text-white" // Active link styles
+                      ? "bg-gray-800 text-white" // Active link styles
                       : "hover:text-white hover:bg-black" // Hover styles for inactive links
                   } bg-gray2 p-3 rounded-lg transition duration-300`}
                   onClick={() => handleLinkClick("website-links")}
@@ -91,7 +91,7 @@ const TrainingModule = () => {
                 <div
                   className={`flex gap-1 cursor-pointer items-center ${
                     activeLink === "files"
-                      ? "bg-black2 text-white"
+                      ? "bg-gray-800 text-white"
                       : "hover:text-white hover:bg-black"
                   } bg-gray2 p-3 rounded-lg transition duration-300 group`}
                   onClick={() => handleLinkClick("files")}
@@ -112,7 +112,7 @@ const TrainingModule = () => {
                 <div
                   className={`flex gap-1 cursor-pointer items-center ${
                     activeLink === "text"
-                      ? "bg-black2 text-white "
+                      ? "bg-gray-800 text-white "
                       : "hover:text-white hover:bg-black"
                   } bg-gray2 p-3 rounded-lg transition duration-300 group`}
                   onClick={() => handleLinkClick("text")}
@@ -133,7 +133,7 @@ const TrainingModule = () => {
                 <div
                   className={`flex gap-1 cursor-pointer items-center ${
                     activeLink === "notion"
-                      ? "bg-black2 text-white"
+                      ? "bg-gray-800 text-white"
                       : "hover:text-white hover:bg-black"
                   } bg-gray2 p-3 rounded-lg transition duration-300 group`}
                   onClick={() => handleLinkClick("notion")}

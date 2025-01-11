@@ -102,7 +102,7 @@ const IndustrySelection = ({ botDetails, setBotDetails }) => {
             <div className="mt-10 flex gap-10">
               <button
                 onClick={handleNavigate}
-                className="bg-gray1 font-medium py-4 px-4 rounded-lg text-white transition-all duration-300"
+                className="bg-gray1 hover:bg-black font-medium py-4 px-4 rounded-lg text-white transition-all duration-300"
                 type="submit"
               >
                 Continue

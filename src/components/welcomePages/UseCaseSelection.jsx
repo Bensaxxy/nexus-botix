@@ -111,7 +111,7 @@ const UseCaseSelection = ({ botDetails, setBotDetails }) => {
             )}
             <button
               onClick={handleNavigate}
-              className="mt-10 bg-gray1 font-medium py-4 px-4 rounded-lg text-white transition-all duration-300"
+              className="mt-10 bg-gray1 hover:bg-black font-medium py-4 px-4 rounded-lg text-white transition-all duration-300"
               type="submit"
             >
               Continue

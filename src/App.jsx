@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Introduction from "./components/welcomePages/introduction";
 import BasicInformation from "./components/welcomePages/BasicInformation";
@@ -11,7 +11,7 @@ import Customization from "./components/welcomePages/customization/Customization
 import TestingAndLaunching from "./components/welcomePages/TestingAndLaunching";
 import ConfirmationDashboardAccess from "./components/welcomePages/ConfirmationDashboardAccess";
 import Dashboard from "./components/dashboard/Dashboard";
-import CreateChatbot from "./components/dashboard/myChatbots/CreateChatbot";
+// import CreateChatbot from "./components/dashboard/myChatbots/CreateChatbot";
 
 const App = () => {
   const [botDetails, setBotDetails] = useState({
@@ -77,7 +77,6 @@ const App = () => {
             element={<ConfirmationDashboardAccess botDetails={botDetails} />}
           />
           <Route path="/dashboard-overview" element={<Dashboard />} />
-          <Route path="/create-chatbot" element={<CreateChatbot />} />
         </Routes>
       </Router>
     </div>

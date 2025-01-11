@@ -111,7 +111,7 @@ const Customization = ({ botDetails, setBotDetails }) => {
             <img src={chatbotImage} alt="chatbot-image" />
             <button
               onClick={handlePreview}
-              className="mt-10 mb-10 flex items-center bg-gray1 font-medium py-4 px-7 rounded-lg text-white transition-all duration-300"
+              className="mt-10 mb-10 flex items-center hover:bg-black bg-gray1 font-medium py-4 px-7 rounded-lg text-white transition-all duration-300"
               type="button"
             >
               Preview bot

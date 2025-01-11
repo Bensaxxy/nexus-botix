@@ -4,12 +4,12 @@ import React from "react";
 
 const Sidebbar = ({ handleClick, activeItem }) => {
   const menuItems = [
-    { id: "overview", label: "Overview", icon: "/side-bar-icons/overview.svg" },
     {
       id: "my-chatbots",
       label: "My Chatbots",
       icon: "/side-bar-icons/chat-bot.svg",
     },
+    { id: "overview", label: "Overview", icon: "/side-bar-icons/overview.svg" },
     { id: "messages", label: "Messages", icon: "/side-bar-icons/message.svg" },
     {
       id: "training",
@@ -40,8 +40,8 @@ const Sidebbar = ({ handleClick, activeItem }) => {
             <div
               key={item.id}
               onClick={() => handleClick(item.id)}
-              className={`flex gap-3 items-center py-4 cursor-pointer duration-300 px-6 ${
-                activeItem === item.id ? "bg-white" : "hover:bg-white"
+              className={`flex gap-4 items-center py-4 cursor-pointer duration-300 px-6 ${
+                activeItem === item.id ? "bg-white" : "hover:bg-gray3 "
               }`}
             >
               <img className="w-6" src={item.icon} alt={item.label} />
