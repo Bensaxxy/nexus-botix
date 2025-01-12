@@ -60,7 +60,7 @@ const Introduction = () => {
             <div className="mt-16 grid grid-cols-3 items-center gap-6">
               <button
                 onClick={handleNavigate}
-                className="py-[12px] rounded-md bg-gray1 hover:bg-black text-white"
+                className="py-[12px] rounded-md bg-gray1 hover:bg-black duration-300 text-white"
               >
                 Get Started
               </button>

@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Introduction from "./components/welcomePages/introduction";
 import BasicInformation from "./components/welcomePages/BasicInformation";
@@ -14,13 +14,22 @@ import Dashboard from "./components/dashboard/Dashboard";
 // import CreateChatbot from "./components/dashboard/myChatbots/CreateChatbot";
 
 const App = () => {
-  const [botDetails, setBotDetails] = useState({
-    botName: "",
-    useCase: "",
-    industry: "",
-    infoSource: "",
+  const [botDetails, setBotDetails] = useState(() => {
+    const savedData = localStorage.getItem("botDetails");
+    return savedData
+      ? JSON.parse(savedData)
+      : {
+          botName: "",
+          useCase: "",
+          industry: "",
+          infoSource: "",
+        };
   });
 
+  // Save botDetails to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("botDetails", JSON.stringify(botDetails));
+  }, [botDetails]);
   return (
     <div className="font-primary">
       <Router>

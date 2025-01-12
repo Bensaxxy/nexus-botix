@@ -10,7 +10,7 @@ const Sidebbar = ({ handleClick, activeItem }) => {
       icon: "/side-bar-icons/chat-bot.svg",
     },
     { id: "overview", label: "Overview", icon: "/side-bar-icons/overview.svg" },
-    { id: "messages", label: "Messages", icon: "/side-bar-icons/message.svg" },
+    // { id: "messages", label: "Messages", icon: "/side-bar-icons/message.svg" },
     {
       id: "training",
       label: "Training Module",

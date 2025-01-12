@@ -15,8 +15,6 @@ const DashboardContainer = ({ activeItem }) => {
         return <MyChatbots />;
       case "overview":
         return <Overview />;
-      case "messages":
-        return <div>Messages Content</div>;
       case "training":
         return <TrainingModule />;
       case "analytics":
