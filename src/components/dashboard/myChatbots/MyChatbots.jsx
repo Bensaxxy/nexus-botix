@@ -7,7 +7,13 @@ import TrainingModule from "../trainingModule/TrainingModule";
 
 const MyChatbots = () => {
   const [activeView, setActiveView] = useState("main");
-  const [chatbots, setChatbots] = useState([]);
+  const [chatbots, setChatbots] = useState([
+    {
+      id: "s5qh5yOmipn7e7559ak1",
+      name: "Nexus bot",
+      created: "27/11/2024",
+    },
+  ]);
 
   const addChatbot = (name) => {
     const newChatbot = {
@@ -63,9 +69,7 @@ const MyChatbots = () => {
                     <p className="text-[14px]">
                       Created: <span>{bot.created}</span>
                     </p>
-                    <p className="text-[14px] underline mt-4 cursor-pointer">
-                      View chatbot
-                    </p>
+                    <p className="text-[14px] underline mt-4">View chatbot</p>
                   </div>
                 ))}
                 <div>
@@ -81,7 +85,7 @@ const MyChatbots = () => {
                 </div>
               </div>
               <a
-                className="md:text-[18px] font-medium flex items-center gap-2 mt-6"
+                className="text-[18px] font-medium flex items-center gap-2 mt-6"
                 href="#"
               >
                 Upgrade plan to get more privileges{" "}
