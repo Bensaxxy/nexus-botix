@@ -10,7 +10,7 @@ const Integrations = () => {
           <h1 className=" font-bold text-[28px]">
             Connect Nexus Botix to your favourite apps
           </h1>
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-5 my-5">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-5">
             {/* IG */}
             <div className=" bg-gray2 rounded-md p-5 flex flex-col items-start gap-3">
               <img src="/social-media-icons/IG.svg" />

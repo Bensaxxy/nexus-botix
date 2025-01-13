@@ -7,7 +7,7 @@ const Analytics = () => {
     <div>
       <div className="container bg-gray2 p-4">
         <div className=" bg-white rounded-md p-4">
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-5">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className=" bg-gray2 border-2 rounded-md border-gray4 p-4 flex flex-col items-start gap-5">
               <img src="/analytic-icons/interactions.svg" />
               <h1 className=" font-medium text-[20px]">Interactions</h1>
@@ -45,7 +45,7 @@ const Analytics = () => {
               <h1 className=" font-bold text-[28px]">Training Data</h1>
               <p>Here are the sources that your AI agent is trained on.</p>
             </div>
-            <div className=" grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               <div className=" bg-gray2 border-2 rounded-md border-gray4 p-4 flex flex-col items-start gap-5">
                 <img src="/analytic-icons/link.svg" />
                 <h1 className=" font-medium text-[20px]">Links</h1>

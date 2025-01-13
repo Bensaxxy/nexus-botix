@@ -5,12 +5,12 @@ import Sidebbar from "./sidebar/Sidebbar";
 import DashboardContainer from "./sidebar/DashboardContainer";
 
 const Dashboard = () => {
-  const [activeItem, setActiveItem] = useState("my-chatbots");
+  const [activeItem, setActiveItem] = useState("overview");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleClick = (item) => {
     setActiveItem(item);
-    setIsSidebarOpen(false); // Close the sidebar when an item is selected (mobile only)
+    setIsSidebarOpen(true); // Close the sidebar when an item is selected (mobile only)
   };
 
   const toggleSidebar = () => {
