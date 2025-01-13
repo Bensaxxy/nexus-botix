@@ -6,9 +6,9 @@ const Overview = () => {
   return (
     <div className="container bg-gray2 p-4">
       <div className=" bg-gray3 rounded-md p-4">
-        <div className=" grid gap-10 grid-cols-1 md:grid-cols-3">
+        <div className=" grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className=" col-span-1 md:col-span-2">
-            <div className=" grid grid-cols-2 gap-6">
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className=" bg-gray2 border-2 rounded-md border-gray4 p-4 flex flex-col items-start gap-5">
                 <img src="/overview-icons/leads.svg" />
                 <h1 className=" font-medium text-[20px]">Leads</h1>

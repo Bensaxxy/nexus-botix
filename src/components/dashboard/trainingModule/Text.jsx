@@ -29,9 +29,7 @@ const Text = ({ setCharacterCount }) => {
           className="bg-transparent border-2 p-4 text-black1 border-gray4 rounded-md w-full resize-none"
           placeholder="Write your text here..."
         />
-        <p className="mt-2 text-black2">
-          Total Characters: {text.length}/{MAX_CHARACTERS}
-        </p>
+        <p className="mt-2 text-black2">Total Characters: {text.length}</p>
       </div>
       {/* create & train button */}
       <div className="flex flex-col justify-end items-end mt-10">

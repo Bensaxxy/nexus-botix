@@ -8,13 +8,15 @@ import Integrations from "../integrations/Integrations";
 import TrainingModule from "../trainingModule/TrainingModule";
 import MyChatbots from "../myChatbots/MyChatbots";
 
-const DashboardContainer = ({ activeItem }) => {
+const DashboardContainer = ({ activeItem, toggleSidebar }) => {
   const renderContent = () => {
     switch (activeItem) {
-      case "my-chatbots":
-        return <MyChatbots />;
       case "overview":
         return <Overview />;
+      case "my-chatbots":
+        return <MyChatbots />;
+      case "messages":
+        return <div>Messages Content</div>;
       case "training":
         return <TrainingModule />;
       case "analytics":
@@ -24,13 +26,13 @@ const DashboardContainer = ({ activeItem }) => {
       case "settings":
         return <div>Settings Content</div>;
       default:
-        return <MyChatbots />;
+        return <Overview />;
     }
   };
 
   return (
     <div>
-      <Heading activeItem={activeItem} />
+      <Heading toggleSidebar={toggleSidebar} activeItem={activeItem} />
       <div className="p-4">{renderContent()}</div>
     </div>
   );
