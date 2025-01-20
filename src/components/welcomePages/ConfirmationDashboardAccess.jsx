@@ -8,7 +8,7 @@ const ConfirmationDashboardAccess = ({ botDetails }) => {
   const navigate = useNavigate();
   // Function to handle navigation to the dashboard
   const handleSubmit = () => {
-    navigate("/dashboard-overview"); // Replace with your dashboard route if it's different
+    navigate("/dashboard"); // Replace with your dashboard route if it's different
   };
 
   const { botName, useCase, industry, infoSource } = botDetails;

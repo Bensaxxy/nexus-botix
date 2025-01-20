@@ -8,7 +8,7 @@ const SkipToDashboard = () => {
 
   // Function to handle the button click and navigate to the dashboard
   const handleSkipToDashboard = () => {
-    navigate("/dashboard-overview"); // Navigate to the dashboard route
+    navigate("/dashboard"); // Navigate to the dashboard route
   };
   return (
     <div>

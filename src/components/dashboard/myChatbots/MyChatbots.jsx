@@ -8,11 +8,11 @@ import TrainingModule from "../trainingModule/TrainingModule";
 const MyChatbots = () => {
   const [activeView, setActiveView] = useState("main");
   const [chatbots, setChatbots] = useState([
-    {
-      id: "s5qh5yOmipn7e7559ak1",
-      name: "Nexus bot",
-      created: "27/11/2024",
-    },
+    // {
+    //   id: "s5qh5yOmipn7e7559ak1",
+    //   name: "Nexus bot",
+    //   created: "27/11/2024",
+    // },
   ]);
 
   const addChatbot = (name) => {

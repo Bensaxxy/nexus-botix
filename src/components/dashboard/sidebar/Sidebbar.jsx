@@ -22,6 +22,11 @@ const Sidebbar = ({
       icon: "/side-bar-icons/brain.svg",
     },
     {
+      id: "appearances",
+      label: "Appearances",
+      icon: "/side-bar-icons/Appearance.svg",
+    },
+    {
       id: "analytics",
       label: "Analytics",
       icon: "/side-bar-icons/chart-histogram.svg",

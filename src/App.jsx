@@ -85,7 +85,7 @@ const App = () => {
             path="/confirmation-and-dashboard-access"
             element={<ConfirmationDashboardAccess botDetails={botDetails} />}
           />
-          <Route path="/dashboard-overview" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
