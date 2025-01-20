@@ -17,10 +17,10 @@ const Appearances = () => {
               <div>
                 <div className="bg-gray2 py-4 px-6 rounded-md mb-5">
                   <h1 className=" font-medium text-[16px]">Welcome Message</h1>
-                  <p className=" text-[12px]">
+                  <p className=" text-[13px]">
                     The introductory message from the chatbot
                   </p>
-                  <div className="bg-gray3 px-2 py-2 rounded-md my-6">
+                  <div className="bg-gray3 px-4 py-3 rounded-md my-6">
                     <h1>Hi, How can I help you today?</h1>
                   </div>
                 </div>
