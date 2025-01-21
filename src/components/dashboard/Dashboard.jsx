@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import Sidebbar from "./sidebar/Sidebbar";
+import Sidebar from "./sidebar/Sidebar";
 import DashboardContainer from "./sidebar/DashboardContainer";
 
 const Dashboard = () => {
@@ -21,7 +21,7 @@ const Dashboard = () => {
     <div>
       {/* Sidebar and Content */}
       <div className="grid grid-cols-2 md:grid-cols-5">
-        <Sidebbar
+        <Sidebar
           handleClick={handleClick}
           activeItem={activeItem}
           isSidebarOpen={isSidebarOpen}

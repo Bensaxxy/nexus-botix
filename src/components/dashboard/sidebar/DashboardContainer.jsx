@@ -36,7 +36,7 @@ const DashboardContainer = ({ activeItem, toggleSidebar }) => {
   return (
     <div>
       <Heading toggleSidebar={toggleSidebar} activeItem={activeItem} />
-      <div className="p-4">{renderContent()}</div>
+      <div>{renderContent()}</div>
     </div>
   );
 };

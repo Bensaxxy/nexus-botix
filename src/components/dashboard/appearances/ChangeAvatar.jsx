@@ -63,9 +63,9 @@ const ChangeAvatar = () => {
             isLogoChanging
               ? "max-h-[300px]  absolute opacity-100"
               : " absolute max-h-0 opacity-0"
-          } overflow-hidden transition-all duration-500 drop-shadow-sm  ease-in-out bg-white p-6 w-full md:max-w-[250px] rounded-lg mt-2`}
+          } overflow-hidden transition-all duration-500 drop-shadow-sm  ease-in-out bg-white p-6 max-w-[200px] md:max-w-[320px] rounded-lg mt-2`}
         >
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-6 md:grid-cols-4 lg:grid-cols-5">
             {[chatbot1, chatbot2, chatbot3, chatbot4, chatbot5, chatbot6].map(
               (icon, index) => (
                 <div
@@ -87,7 +87,7 @@ const ChangeAvatar = () => {
           <div className="flex justify-between items-center mt-4">
             <label
               htmlFor="file-upload"
-              className="underline text-[12px] font-semibold cursor-pointer"
+              className="underline text-[13px] font-semibold cursor-pointer"
             >
               Upload Logo
             </label>

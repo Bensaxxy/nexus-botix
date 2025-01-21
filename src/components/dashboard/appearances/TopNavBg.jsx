@@ -3,20 +3,21 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 
-const SendMessageBtn = ({ onColorChange }) => {
+const TopNavBg = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedColor, setSelectedColor] = useState("#607D8B");
-  const [inputValue, setInputValue] = useState("#607D8B");
+  const [selectedColor, setSelectedColor] = useState("#ffffff");
+  const [inputValue, setInputValue] = useState("#ffffff");
 
   const predefinedColors = [
-    "#607D8B",
+    "#ffffff",
     "#FFD700",
     "#FF6B6B",
-    "#795548",
     "#4CAF50",
     "#2196F3",
     "#9C27B0",
     "#FF9800",
+    "#795548",
+    "#607D8B",
     "#F06292",
   ];
 
@@ -25,21 +26,18 @@ const SendMessageBtn = ({ onColorChange }) => {
     setInputValue(value);
     if (value.match(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/)) {
       setSelectedColor(value);
-      onColorChange(value); // Notify the parent of the color change
     }
   };
 
   const handleColorSelect = (color) => {
     setSelectedColor(color);
     setInputValue(color);
-    onColorChange(color); // Notify the parent of the color change
     setIsOpen(false);
   };
-
   return (
     <div>
       <div className="w-full">
-        <p className=" text-black1 text-[14px] mb-2">Send Message Button</p>
+        <p className=" text-black1 text-[14px] mb-2">Top Nav background</p>
         <div className="flex">
           <div
             className=" rounded-s-md h-10 w-12"
@@ -68,7 +66,7 @@ const SendMessageBtn = ({ onColorChange }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="absolute mt-2 p-4 rounded-md shadow-lg border border-gray-200 z-10">
+        <div className="absolute mt-2 p-4 bg-white rounded-md shadow-lg border border-gray-200 z-10">
           <div className="grid grid-cols-5 gap-2 mb-4">
             {predefinedColors.map((color) => (
               <button
@@ -98,4 +96,4 @@ const SendMessageBtn = ({ onColorChange }) => {
   );
 };
 
-export default SendMessageBtn;
+export default TopNavBg;

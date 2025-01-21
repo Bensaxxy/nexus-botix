@@ -1,18 +1,22 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import ChangeAvatar from "./ChangeAvatar";
 import ChatWindowBg from "./ChatWindowBg";
 import UserChatMessageBg from "./UserChatMessageBg";
 import ChatbotChatMessageBg from "./ChatbotChatMessageBg";
 import SendMessageBtn from "./SendMessageBtn";
+import AppearancesButton from "./AppearancesButton";
+import TopNavBg from "./TopNavBg";
 
 const Appearances = () => {
+  const [buttonColor, setButtonColor] = useState("#607D8B");
+  const [bgColor, setBgColor] = useState("#e5e7eb");
   return (
     <div>
       <div className="container bg-gray2 p-4">
         <div className=" bg-gray3 rounded-md p-4">
-          <div className=" grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className=" col-span-2  ">
               <div>
                 <div className="bg-gray2 py-4 px-6 rounded-md mb-5">
@@ -26,30 +30,25 @@ const Appearances = () => {
                 </div>
                 <div className="bg-gray2 py-4 px-6 rounded-md">
                   <h1 className=" font-medium text-[16px]">Branding</h1>
-                  <p className=" text-[12px]">
+                  <p className=" text-[13px]">
                     Upload your avatar and set colors
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-                    <div className=" flex flex-col gap-2">
+                  <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-4">
+                    <div className=" flex flex-col gap-5">
                       <ChangeAvatar />
                       <ChatWindowBg />
+                      <TopNavBg onColorChange={setBgColor} />
                     </div>
-                    <div>
+                    <div className=" flex flex-col gap-6">
                       <UserChatMessageBg />
                       <ChatbotChatMessageBg />
-                      <SendMessageBtn />
+                      <SendMessageBtn onColorChange={setButtonColor} />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className=" flex gap-6 items-center my-24">
-                <button className=" py-3 px-8 bg-gray1 rounded-md text-white">
-                  Reset appearance
-                </button>
-                <button className="py-3 px-8 bg-black2 rounded-md text-white flex gap-2 items-center">
-                  Save changes <img src="/icons/arrow-right.svg" />
-                </button>
-              </div>
+              {/* Appearances button */}
+              <AppearancesButton color={buttonColor} />
             </div>
             {/* side images */}
             <div>

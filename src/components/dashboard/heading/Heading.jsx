@@ -11,6 +11,7 @@ const Heading = ({ activeItem, toggleSidebar }) => {
     messages: "Messages",
     training: "Training Module",
     analytics: "Analytics",
+    appearances: "Appearances",
     integrations: "Integrations",
     settings: "Settings",
   };
