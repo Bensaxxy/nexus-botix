@@ -11,7 +11,6 @@ import TopNavBg from "./TopNavBg";
 
 const Appearances = () => {
   const [buttonColor, setButtonColor] = useState("#607D8B");
-  const [bgColor, setBgColor] = useState("#e5e7eb");
   return (
     <div>
       <div className="container bg-gray2 p-4">
@@ -37,7 +36,7 @@ const Appearances = () => {
                     <div className=" flex flex-col gap-5">
                       <ChangeAvatar />
                       <ChatWindowBg />
-                      <TopNavBg onColorChange={setBgColor} />
+                      <TopNavBg />
                     </div>
                     <div className=" flex flex-col gap-6">
                       <UserChatMessageBg />

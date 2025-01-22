@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 
-const UserChatMessageBg = ({ setMessageBg }) => {
+const UserChatMessageBg = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedColor, setSelectedColor] = useState("#ffffff");
   const [inputValue, setInputValue] = useState("#ffffff");

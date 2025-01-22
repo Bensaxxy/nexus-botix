@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
+import { useBackgroundColor } from "../../../context/BackgroundColorContext";
 
 const TopNavBg = () => {
+  const { setBgColor } = useBackgroundColor(); // Get the context
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedColor, setSelectedColor] = useState("#ffffff");
   const [inputValue, setInputValue] = useState("#ffffff");
 
   const predefinedColors = [
@@ -25,13 +26,13 @@ const TopNavBg = () => {
     const value = e.target.value;
     setInputValue(value);
     if (value.match(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/)) {
-      setSelectedColor(value);
+      setBgColor(value); // Update global state
     }
   };
 
   const handleColorSelect = (color) => {
-    setSelectedColor(color);
     setInputValue(color);
+    setBgColor(color); // Update global state
     setIsOpen(false);
   };
   return (
@@ -41,7 +42,7 @@ const TopNavBg = () => {
         <div className="flex">
           <div
             className=" rounded-s-md h-10 w-12"
-            style={{ backgroundColor: selectedColor }}
+            style={{ backgroundColor: inputValue }}
           ></div>
           <div className=" bg-[#E7E7E7] rounded-e-md flex items-center gap-5">
             <input
@@ -75,7 +76,7 @@ const TopNavBg = () => {
                 className="w-8 h-8 rounded-md relative flex items-center justify-center"
                 style={{ backgroundColor: color }}
               >
-                {color === selectedColor && (
+                {color === inputValue && (
                   <FaCheck className="text-white" size={16} />
                 )}
               </button>
@@ -85,7 +86,7 @@ const TopNavBg = () => {
           <div className="mt-4">
             <input
               type="color"
-              value={selectedColor}
+              value={inputValue}
               onChange={(e) => handleColorSelect(e.target.value)}
               className="w-full h-10 cursor-pointer"
             />

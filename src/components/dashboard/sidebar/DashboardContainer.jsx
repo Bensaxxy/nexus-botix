@@ -8,6 +8,7 @@ import Integrations from "../integrations/Integrations";
 import TrainingModule from "../trainingModule/TrainingModule";
 import MyChatbots from "../myChatbots/MyChatbots";
 import Appearances from "../appearances/Appearances";
+import Message from "../message/Message";
 
 const DashboardContainer = ({ activeItem, toggleSidebar }) => {
   const renderContent = () => {
@@ -17,7 +18,7 @@ const DashboardContainer = ({ activeItem, toggleSidebar }) => {
       case "my-chatbots":
         return <MyChatbots />;
       case "messages":
-        return <div>Messages Content</div>;
+        return <Message />;
       case "training":
         return <TrainingModule />;
       case "appearances":

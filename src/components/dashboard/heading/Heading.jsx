@@ -2,8 +2,10 @@
 
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useBackgroundColor } from "../../../context/BackgroundColorContext";
 
 const Heading = ({ activeItem, toggleSidebar }) => {
+  const { bgColor } = useBackgroundColor(); // Get the context
   // Define a title mapping for each item
   const titles = {
     overview: "Overview",
@@ -18,7 +20,10 @@ const Heading = ({ activeItem, toggleSidebar }) => {
 
   return (
     <div className=" h-[81px] ">
-      <div className="container z-50 fixed md:w-full py-7 border-b-2 border-gray4 bg-gray2">
+      <div
+        className="container z-50 fixed md:w-full py-7 border-b-2 border-gray4 "
+        style={{ backgroundColor: bgColor }}
+      >
         <h1 className=" hidden md:block text-[20px] font-semibold">
           {titles[activeItem]}
         </h1>
