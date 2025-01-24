@@ -30,6 +30,7 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("botDetails", JSON.stringify(botDetails));
   }, [botDetails]);
+
   return (
     <div className="font-primary">
       <Router>

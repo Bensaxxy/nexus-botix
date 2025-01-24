@@ -9,6 +9,7 @@ import TrainingModule from "../trainingModule/TrainingModule";
 import MyChatbots from "../myChatbots/MyChatbots";
 import Appearances from "../appearances/Appearances";
 import Message from "../message/Message";
+import Settings from "../settings/Settings";
 
 const DashboardContainer = ({ activeItem, toggleSidebar }) => {
   const renderContent = () => {
@@ -28,7 +29,7 @@ const DashboardContainer = ({ activeItem, toggleSidebar }) => {
       case "integrations":
         return <Integrations />;
       case "settings":
-        return <div>Settings Content</div>;
+        return <Settings />;
       default:
         return <Overview />;
     }
